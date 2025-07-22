@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-flask-deployment
+  name: serg-flask-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-flask
+      app: serg-flask
   template:
     metadata:
       labels:
-        app: hello-flask
+        app: serg-flask
     spec:
       containers:
-      - name: hello-flask
-        image: your-dockerhub-username/hello-flask:latest
+      - name: serg-flask
+        image: sergg077/serg-flask:latest
         ports:
         - containerPort: 5000
